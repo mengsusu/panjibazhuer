@@ -1,0 +1,94 @@
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ cd /e/git/Git/learngit
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git add a.txt
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git commit -m "Ìá½»µ½²Ö¿â"
+[master 7d7d779] Ìá½»µ½²Ö¿â
+ 1 file changed, 4 insertions(+)
+ create mode 100644 a.txt
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ vim a.txt
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git commit -m "ÐÞ¸Ä"
+On branch master
+Changes not staged for commit:
+        modified:   a.txt
+        deleted:    readme.txt
+
+no changes added to commit
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git diff
+diff --git a/a.txt b/a.txt
+index c78aa10..1366b8c 100644
+--- a/a.txt
++++ b/a.txt
+@@ -1,4 +1,5 @@
+ 111111111
+ 222222222
+ 333333333
+-444444444
+\ No newline at end of file
++444444444
++555555555
+diff --git a/readme.txt b/readme.txt
+deleted file mode 100644
+index 5396033..0000000
+--- a/readme.txt
++++ /dev/null
+@@ -1,3 +0,0 @@
+-11111111111
+-22222222222
+-33333333333
+\ No newline at end of file
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git log
+commit 7d7d77908cfc95c25d2c3b024a8e98f9ff189ece (HEAD -> master)
+Author: Your Name <email@example.com>
+Date:   Mon Oct 21 09:45:19 2019 +0800
+
+    Ìá½»µ½²Ö¿â
+
+commit e6f18fc60b0f0e0c9724b57bbcfd568dfe002c05
+Author: Your Name <email@example.com>
+Date:   Mon Oct 21 09:02:06 2019 +0800
+
+    Ìá½»µ½¿â
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git reset
+Unstaged changes after reset:
+M       a.txt
+D       readme.txt
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ git checkout -- readme.txt
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ cat a.txt
+111111111
+222222222
+333333333
+444444444
+555555555
+6666s6666
+777777777
+
+ÃÎ¡¢ËÕËÕ@DESKTOP-MF96HQG MINGW64 /e/git/Git/learngit (master)
+$ rm a.txt
